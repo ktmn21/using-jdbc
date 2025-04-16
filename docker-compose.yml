@@ -1,0 +1,20 @@
+services:
+  db:
+    container_name: using_jdbc
+    image: postgres
+    environment:
+      POSTGRES_USER: kutman_3
+      POSTGRES_PASSWORD: 12345
+      PGDATA: data/postgres
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - db
+    restart: unless-stopped
+networks:
+  db:
+    driver: bridge
+volumes:
+  db:
