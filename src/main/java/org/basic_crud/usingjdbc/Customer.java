@@ -3,11 +3,20 @@ package org.basic_crud.usingjdbc;
 import java.util.Objects;
 
 public class Customer {
+    private Integer id;
     private String name;
     private String email;
     private Integer age;
 
     public Customer() {
+    }
+
+
+    public Customer(Integer id, String name, String email, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.age = age;
     }
 
     public Customer(String name, String email, Integer age) {
@@ -18,6 +27,10 @@ public class Customer {
 
     public String getName() {
         return name;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public void setName(String name) {
@@ -56,9 +69,12 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +
                 '}';
     }
+
+
 }

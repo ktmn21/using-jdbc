@@ -7,3 +7,6 @@ spring:
     url: jdbc:postgresql://localhost:5433/customer
     username: kutman_3
     password: 12345
+server:
+  error:
+    include-message: always
